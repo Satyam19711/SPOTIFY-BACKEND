@@ -18,10 +18,6 @@ connectCloudinary();
 app.use("/api/song", songRouter);
 app.use("/api/album", albumRouter);
 
-app.get("/", (req, res) => {
-  res.send("api done");
-});
-
 app.listen(port, () => {
   console.log(`PORT is running on server ${port}`);
 });
