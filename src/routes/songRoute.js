@@ -6,11 +6,13 @@ const {
 } = require("../controller/songController");
 
 const uploads = require("../middleware/multer");
+const verifyAdmin = require("../middleware/verifyAdmin");
 
 const songRouter = express.Router();
 
 songRouter.post(
   "/add",
+  verifyAdmin,
   uploads.fields([
     { name: "image", maxCount: 1 },
     { name: "audio", maxCount: 1 },
@@ -19,6 +21,6 @@ songRouter.post(
 );
 songRouter.get("/list", listSong);
 
-songRouter.post("/remove", removeSong);
+songRouter.post("/remove", verifyAdmin, removeSong);
 
 module.exports = songRouter;

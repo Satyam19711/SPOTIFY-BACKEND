@@ -5,13 +5,14 @@ const {
   listAlbum,
   removeAlbum,
 } = require("../controller/albumController");
+const verifyAdmin = require("../middleware/verifyAdmin");
 
 const albumRouter = express.Router();
 
-albumRouter.post("/add", uploads.single("image"), addAlbum);
+albumRouter.post("/add", verifyAdmin, uploads.single("image"), addAlbum);
 
 albumRouter.get("/list", listAlbum);
 
-albumRouter.post("/remove", removeAlbum);
+albumRouter.post("/remove", verifyAdmin, removeAlbum);
 
 module.exports = albumRouter;
