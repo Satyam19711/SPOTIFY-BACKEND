@@ -1,10 +1,10 @@
 const express = require("express");
 const cors = require("cors");
 
-const connectDB = require("./config/mongodb");
-const connectCloudinary = require("./config/cloudinary");
-const songRouter = require("./routes/songRoute");
-const albumRouter = require("./routes/albumRoute");
+const connectDB = require("./src/config/mongodb");
+const connectCloudinary = require("./src/config/cloudinary");
+const songRouter = require("./src/routes/songRoute");
+const albumRouter = require("./src/routes/albumRoute");
 require("dotenv").config({ quiet: true });
 
 const app = express();
