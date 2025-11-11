@@ -1,11 +1,11 @@
 const express = require("express");
 const cors = require("cors");
-
 const connectDB = require("./src/config/mongodb");
 const connectCloudinary = require("./src/config/cloudinary");
 const songRouter = require("./src/routes/songRoute");
 const albumRouter = require("./src/routes/albumRoute");
-require("dotenv").config({ quiet: true });
+
+require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 2000;
