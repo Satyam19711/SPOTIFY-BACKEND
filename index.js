@@ -16,7 +16,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://satyamspotifyclone.netlify.app",
-      "https://admin-spotify.netlify.app/",
+      "https://admin-spotify.netlify.app",
     ],
     methods: ["GET", "POST", "DELETE"],
     credentials: true,
