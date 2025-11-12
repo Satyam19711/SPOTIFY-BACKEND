@@ -13,7 +13,11 @@ const port = process.env.PORT || 2000;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://satyamspotifyclone.netlify.app"],
+    origin: [
+      "http://localhost:5173",
+      "https://satyamspotifyclone.netlify.app",
+      "https://admin-spotify.netlify.app/",
+    ],
     methods: ["GET", "POST", "DELETE"],
     credentials: true,
   })
