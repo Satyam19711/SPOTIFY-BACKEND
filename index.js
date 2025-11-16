@@ -15,8 +15,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://satyamspotifyclone.netlify.app",
-      "https://admin-spotify.netlify.app",
+      "https://satyam1919-spotify-clone.vercel.app",
+      "https://satyam1919-spotify-admin.vercel.app",
     ],
     methods: ["GET", "POST", "DELETE"],
     credentials: true,
